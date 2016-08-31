@@ -23,20 +23,21 @@ def bring(foods, is_sort=False):
     message to bring foods for picnic
 
     @param foods: foods to bring
-    
+
     @returns: message
     """
 
     if is_sort:
         foods.sort()
-    
+
     cnt = len(foods)
     if cnt == 1:
-        return f"You are bringing {foods[0]}"
-    elif cnt == 2:
-        return f"You are bringing {foods[0]} and {foods[1]}"
-    else:
-        return 'You are bringing ' + ', '.join(foods[:-1]) + f', and {foods[-1]}.'
+        return f"You are bringing {foods[0]}."
+
+    if cnt == 2:
+        return f"You are bringing {foods[0]} and {foods[1]}."
+
+    return 'You are bringing ' + ', '.join(foods[:-1]) + f', and {foods[-1]}.'
 
 
 def main():
