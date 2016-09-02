@@ -1,4 +1,5 @@
 # Hello program
+How to write and test a Python program
 
 ## Purpose
 - Write a python program to say "Hello, World!"
