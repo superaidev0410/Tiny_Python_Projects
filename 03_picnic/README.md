@@ -1,4 +1,5 @@
 # Picnic
+Working with lists
 
 ## Purpose
 - Store one or more positional arguments in a list
