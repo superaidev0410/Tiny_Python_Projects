@@ -17,29 +17,29 @@ def parse_args():
     return parser.parse_args()
 
 
-def convert(input, output):
+def convert(input_data, output):
     """
     Convert all the letters uppercase
 
-    @param input: input text or file
+    @param input_data: input text or file
     @param output: ouput text or file
-    
+
     @returns: output text or 'success' in case of output is file
     """
 
     # get input text
-    text = input
-    if os.path.isfile(input):
-        with open(input, 'r') as f:
-            text = f.read()
-    
+    text = input_data
+    if os.path.isfile(input_data):
+        with open(input_data, 'r', encoding='utf8') as input_file:
+            text = input_file.read()
+
     text = text.upper()
 
     # output text
     if output == 'stdout':
         return text
-    with open(output, 'w') as f:
-        f.write(text)
+    with open(output, 'w', encoding='utf8') as output_file:
+        output_file.write(text)
     return 'success'
 
 
